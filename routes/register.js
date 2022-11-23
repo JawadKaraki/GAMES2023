@@ -3,11 +3,10 @@ const bcrypt = require("bcrypt");
 const router = express.Router();
 const mongo = require("mongoose");
 const mongoSanitize = require("express-mongo-sanitize");
-const cookieParser = require("cookie-parser");
 
 var uri = "mongodb+srv://user:MYLAaxtu3YPEQ2bL@cluster0.fzxyqt5.mongodb.net/?retryWrites=true&w=majority";
 
-router.use(cookieParser());
+
 
 router.get("/",async (req,res)=>{
     res.render("reg.ejs");
