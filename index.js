@@ -1,7 +1,7 @@
 const  express =  require("express");
 const  mongoSanitize = require("express-mongo-sanitize");
 const app = express();
-const cookieParser = require("cookie-parser");
+
 const session = require('express-session');
 const cors = require('cors');
 
@@ -35,7 +35,7 @@ const data = [
     },
 ]
 
-app.use(cookieParser());
+
 app.use(mongoSanitize());
 app.set("view-engine","ejs");
 app.use(express.static(__dirname + "/public"));
