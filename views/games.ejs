@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <nav>
+        <a id="logo" href="">LOGO</a>
+        <a id="logout" href="/logout">LOGOUT</a>
+    </nav>
+    <div id="view">
+        <div id="cover"></div>
+        <img id="view-img" src="<%= data[0].img %> " alt="">
+        <p id="view-title"><%= data[0].title %></p>
+        <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maiores sed, dolores aspernatur quibusdam ex minima perspiciatis id vel reprehenderit dignissimos maxime ad eaque voluptatibus! Ducimus totam illo sint impedit?</p>
+        <div class="like">
+            LIKE
+        </div>
+    </div>
+    <div id="games">
+        <% data.forEach(function( game ){ %>
+            <div class="game" onclick='setView("<%= game._id %>","<%= game.title %>","<%= game.img %>")'>
+                <div class="title">
+                    <%= game.title %>
+                </div>
+                <img src="<%= game.img %>" />
+            </div>
+        <% }) %>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var id = "<% data[0]._id  %>";
+        function setView(ID,title,img){
+            id = ID;
+            var i = document.getElementById("view-img");
+            var t = document.getElementById("view-title");
+            i.src = img;
+            t.innerHTML = title;
+        }
+        window.setView = setView;
+
+        document.getElementsByClassName("like")[0].addEventListener("click",()=>{
+            $.post('/games', {id:id});
+        });
+
+    </script>
+</body>
+</html>

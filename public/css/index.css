@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #000000;
+    font-family: 'DIN pro';
+    background-image: url("../img/123123.jpg");
+    background-position:center -200px;
+    background-size:500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+#text1{
+    position: relative;
+    width: 50%;
+    left: 100px;
+    top: 150px;
+    font-size: 100px;
+    color: #f9f9f9;
+    letter-spacing: 80px;
+}
+#text2{
+    position: relative;
+    width: 50%;
+    left: 100px;
+    top: 150px;
+    font-size: 14px;
+    color: #f9f9f9;
+    letter-spacing: 10px;
+    margin-top: 20px;
+}
+#link{
+    position: absolute;
+    color: white;
+    right: 100px;
+    bottom: 50px;
+    font-size: 10px;
+    letter-spacing: 10px;
+
+}

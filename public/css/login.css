@@ -1,0 +1,44 @@
+body{
+    background-color: #000000;
+    font-family: 'DIN pro';
+    height: 100vh;
+    background-image: url("../img/123123.jpg");
+    background-position: 0px -200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+h1{
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 200px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    height: 400px;
+
+}
+input{
+    background-color: #f9f9f9;
+    border: 1px solid white;
+    border-radius: 100px;
+    text-align: center;
+    color: #000000;
+    margin: 20px;
+    height: 30px;
+    width:80%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#submit{
+    color: #000000;
+    width: 100px;
+    height: 50px;
+}
